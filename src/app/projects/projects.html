@@ -1,0 +1,48 @@
+    <section class="projects" id="projects">
+      <h2 scrollAnimate="fade-down">Featured Projects</h2>
+      <div class="projects-grid">
+        @for (project of projects; track project.id) {
+          <div class="project-card">
+            <h3>{{ project.title }}</h3>
+            
+            <!-- Image or Live Preview -->
+            <div class="project-media" scrollAnimate="fade-up">
+              @if (project.liveUrl) {
+                <div class="live-preview">
+                  <iframe 
+                    [src]="getSafeUrl(project.liveUrl)"
+                    frameborder="0"
+                    scrolling="no"
+                    title="Live preview of {{ project.title }}">
+                  </iframe>
+                </div>
+              } @else if (project.imageUrl) {
+                <div class="project-image">
+                  <img 
+                    [src]="project.imageUrl" 
+                    [alt]="project.title + ' screenshot'"
+                    loading="lazy">
+                </div>
+              }
+            </div>
+
+            <p class="project-description">{{ project.description }}</p>
+            
+            <div class="tech-stack">
+              @for (tech of project.techStack; track tech) {
+                <span class="tech-tag">{{ tech }}</span>
+              }
+            </div>
+
+            <!-- Action buttons -->
+            <div class="project-actions">
+              @if (project.githubUrl) {
+                <a [href]="project.githubUrl" target="_blank" class="action-btn github">
+                  GitHub
+                </a>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </section>

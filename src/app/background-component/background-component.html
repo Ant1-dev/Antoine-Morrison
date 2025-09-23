@@ -1,0 +1,15 @@
+<!-- Animated gradient background (bottom layer) -->
+<div class="bg-gradient"></div>
+
+<!-- WebGL Fluid Canvas (middle layer) -->
+<canvas #fluidCanvas class="fluid-canvas" [width]="canvasWidth()" [height]="canvasHeight()">
+</canvas>
+
+<!-- Particle Canvas (top layer) -->
+<canvas #particleCanvas class="particle-canvas" [width]="canvasWidth()" [height]="canvasHeight()">
+</canvas>
+
+<!-- Scroll progress indicator -->
+<div class="scroll-indicator">
+  <div class="scroll-progress" [style.width.%]="scrollProgress()"></div>
+</div>

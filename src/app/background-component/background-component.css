@@ -1,0 +1,66 @@
+/* Animated gradient background (bottom layer) */
+.bg-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #0a0a0a, #1a1a2e, #16213e, #0f3460);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    z-index: -15;
+}
+
+@keyframes gradientShift {
+    0% { 
+    background-position: 0% 50%; 
+    }
+    50% { 
+    background-position: 100% 50%; 
+    }
+    100% { 
+    background-position: 0% 50%; 
+    }
+}
+
+/* Fluid canvas (middle layer) */
+.fluid-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    pointer-events: auto;
+    opacity: 0.6; /* Make it semi-transparent to blend with other layers */
+}
+
+/* Particle canvas (top background layer) */
+.particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    pointer-events: none;
+    opacity: 0.8; /* Slightly transparent for layering effect */
+}
+
+/* Scroll progress indicator */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(0, 255, 255, 0.1);
+    z-index: 1001;
+}
+
+.scroll-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #ff00ff);
+    width: 0%;
+    transition: width 0.1s ease;
+}

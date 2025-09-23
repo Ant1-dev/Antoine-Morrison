@@ -1,0 +1,26 @@
+    <section class="contact" id="contact">
+      <h2 scrollAnimate="fade-down">Get In Touch</h2>
+      <div scrollAnimate="fade-up" class="contact-container">
+        <div class="contact-intro">
+          <h3>Let's work together</h3>
+          <p>Have a project in mind or just want to chat? I'd love to hear from you. Feel free to reach out through any of these channels.</p>
+        </div>
+
+        <div class="contact-methods">
+          @for (method of contactMethods; track method.id) {
+            <a 
+              [href]="method.url" 
+              target="_blank" 
+              class="contact-method"
+              [attr.aria-label]="'Contact via ' + method.title">
+              <div class="method-icon">{{ method.icon }}</div>
+              <div class="method-info">
+                <h4>{{ method.title }}</h4>
+                <p>{{ method.value }}</p>
+              </div>
+              <div class="method-arrow">→</div>
+            </a>
+          }
+        </div>
+      </div>
+    </section>
