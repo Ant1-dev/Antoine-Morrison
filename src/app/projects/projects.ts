@@ -25,7 +25,7 @@ export class Projects {
       id: '2',
       title: 'Medical Image Viewer',
       description:
-        'Desktop application that can view and annotate images, with .dicom/.dcm compatitbilty.',
+        'Desktop application that allows users to view and manipulate medical images in DICOM format with various tools and filters.',
       techStack: ['Qt', 'C++', 'CMake', 'GDCM'],
       imageUrl: '/medDemo.gif',
       githubUrl: 'https://github.com/Ant1-dev/Medical-Image-Viewer',
@@ -34,7 +34,7 @@ export class Projects {
       id: '3',
       title: 'Code Zone',
       description:
-        'A full-stack application meant to help students keep track of leetcode questions and prepare for technical assessments.',
+        'Keep track of your leetcode progress with this MERN stack application that allows users to log and manage coding problems they have solved.',
       techStack: ['React', 'MongoDB', 'Express', 'Node.js'],
       imageUrl: '/codeDemo.png',
       githubUrl: 'https://github.com/Erickferpinedo/Code-Zone',
