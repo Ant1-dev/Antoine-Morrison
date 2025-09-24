@@ -51,3 +51,11 @@
 .nav-links a:hover::after {
     width: 100%;
 }
+
+@media (max-width: 768px) {
+    .nav-bar {
+        justify-content: space-between;
+        padding: 5%;
+        gap: 15px;
+    }
+}
