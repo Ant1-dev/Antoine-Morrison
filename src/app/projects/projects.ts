@@ -18,7 +18,7 @@ export class Projects {
         'A full-stack application that shows the time remaining till a new seasonal anime episode drops as well as showing any shows that have future confirmed dates.',
       techStack: ['Angular', 'PostgreSQL', 'Spring Boot', 'Java', 'AWS EC2', 'Docker'],
       liveUrl: 'https://animelivecountdown.com',
-      imageUrl: '../assets/animeDemo.png',
+      imageUrl: '/animeDemo.png',
       githubUrl: 'https://github.com/Ant1-dev/AnimeLiveCountdown',
     },
     {
@@ -27,7 +27,7 @@ export class Projects {
       description:
         'Desktop application that can view and annotate images, with .dicom/.dcm compatitbilty.',
       techStack: ['Qt', 'C++', 'CMake', 'GDCM'],
-      imageUrl: '/assets/medDemo.gif',
+      imageUrl: '/medDemo.gif',
       githubUrl: 'https://github.com/Ant1-dev/Medical-Image-Viewer',
     },
     {
@@ -36,7 +36,7 @@ export class Projects {
       description:
         'A full-stack application meant to help students keep track of leetcode questions and prepare for technical assessments.',
       techStack: ['React', 'MongoDB', 'Express', 'Node.js'],
-      imageUrl: '/assets/codeDemo.png',
+      imageUrl: '/codeDemo.png',
       githubUrl: 'https://github.com/Erickferpinedo/Code-Zone',
     },
   ];

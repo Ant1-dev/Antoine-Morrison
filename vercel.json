@@ -1,25 +1,15 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build", 
-      "config": {
-        "distDir": "dist/portfolio"
-      }
+      "src": "dist/portfolio/browser/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
-    },
-    {
-      "src": "/(.*\\.(js|css|ico|png|jpg|gif|svg))",
-      "dest": "/$1"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/dist/portfolio/browser/index.html"
     }
   ]
 }
